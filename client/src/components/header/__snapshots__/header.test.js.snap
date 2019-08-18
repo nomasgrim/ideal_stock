@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders the header component 1`] = `
+<div
+  className="header"
+>
+  <header
+    className="MuiPaper-root-9 MuiPaper-elevation4-15 MuiAppBar-root-1 MuiAppBar-positionStatic-5 MuiAppBar-colorPrimary-7"
+  >
+    <div
+      className="MuiToolbar-root-36 MuiToolbar-gutters-37"
+    >
+      <img
+        alt="logo"
+        height={40}
+        src="logo.png"
+      />
+      <button
+        className="MuiButtonBase-root-62 MuiButton-root-38 MuiButton-text-40 MuiButton-flat-43 MuiButton-colorInherit-57"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="MuiButton-label-39"
+        >
+          <a
+            href="/"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          >
+            Home
+          </a>
+        </span>
+        <span
+          className="MuiTouchRipple-root-65"
+        />
+      </button>
+      <button
+        className="MuiButtonBase-root-62 MuiButton-root-38 MuiButton-text-40 MuiButton-flat-43 MuiButton-colorInherit-57"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="MuiButton-label-39"
+        >
+          <a
+            href="/examples"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          >
+            WebSocket Examples
+          </a>
+        </span>
+        <span
+          className="MuiTouchRipple-root-65"
+        />
+      </button>
+    </div>
+  </header>
+</div>
+`;
