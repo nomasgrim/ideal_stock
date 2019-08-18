@@ -5,10 +5,10 @@ RUN mkdir -p /srv/app/services
 WORKDIR /srv/app/services
 
 COPY package.json ./srv/app/services
-COPY yarn.lock ./srv/app/services
+COPY package-lock.json ./srv/app/services
 
-RUN yarn
+RUN npm install
 
 COPY . /srv/app/services
 
-CMD ["yarn", "dev"]
+CMD ["npm", "run", "dev"]
