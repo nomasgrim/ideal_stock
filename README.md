@@ -14,12 +14,20 @@ Branch off develop to begin you're own personal changes
 
 ### Install Dependencies
 ```ssh
-yarn
+cd client
+npm install
+cd ../server
+npm install
 ```
 
-### Run Dev
+### Create Environment variables file
+root directory
+.env
+API_HOST="http://localhost:3000"
+APP_SERVER_PORT=9999
+REACT_APP_PORT=3000
+
+### Build and Run application
 ```ssh
-yarn run dev
+docker-compose up --build
 ```
-
-### Hope for the best
