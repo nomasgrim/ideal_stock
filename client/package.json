@@ -1,0 +1,50 @@
+{
+  "name": "pwa-client",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Landon",
+  "dependencies": {
+    "@material-ui/core": "^1.3.1",
+    "@material-ui/icons": "^1.1.0",
+    "cpx": "^1.5.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "react-test-renderer": "^16.4.1",
+    "redux": "^4.0.0",
+    "redux-form": "^7.4.2",
+    "redux-thunk": "^2.3.0",
+    "socket.io-client": "^2.1.1"
+  },
+  "scripts": {
+    "copy": "cpx \"./build/**/*\" ../pwa-backend/dist",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "test-coverage": "react-scripts test --env=jsdom --coverage",
+    "lint": "standard --verbose | snazzy",
+    "lint-fix": "standard --fix",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
+    "jsdoc": "jsdoc src -r --destination ./jsdocs && live-server jsdocs",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "jsdoc": "^3.5.5",
+    "live-server": "^1.2.0",
+    "react-styleguidist": "^7.1.0",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-mock-store": "^1.5.3",
+    "snazzy": "^7.1.1",
+    "standard": "^11.0.1"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "build/*"
+    ]
+  }
+}
