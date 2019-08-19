@@ -5,11 +5,11 @@ import {
   Switch
 } from 'react-router-dom'
 
-import Examples from './components/examples/ExamplesList'
 import Footer from './components/footer/Footer'
 import GenericNotFound from './components/genericNotFound/GenericNotFound'
 import Header from './components/header/Header'
 import Snackbar from './components/snackbar/Snackbar'
+import ExamplesList from './components/examples/ExamplesList';
 
 /**
  * @function
@@ -22,7 +22,7 @@ const App = () => (
       <Snackbar />
       <Header />
       <Switch>
-        <Route exact path='/' component={Examples} />
+        <Route exact path='/' component={ExamplesList} />
         <Route exact path='*' component={GenericNotFound} />
       </Switch>
       <Footer />

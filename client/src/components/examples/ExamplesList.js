@@ -3,10 +3,11 @@ import Paper from '@material-ui/core/Paper'
 import PropTypes from 'prop-types'
 import React, { Component, Fragment } from 'react'
 
-import { getUsers, startTimer } from '../../actions'
+import { getUsers, getStock, startTimer } from '../../actions'
 import ContactForm from './Form'
 import Timer from './Timer'
 import Users from './Users'
+import Stock from '../../containers/Stock/'
 
 /**
  * @class
@@ -19,9 +20,11 @@ import Users from './Users'
 class Examples extends Component {
     static propTypes = {
       getUsers: PropTypes.func.isRequired,
+      getStock: PropTypes.func.isRequired,
       startTimer: PropTypes.func.isRequired,
       time: PropTypes.string,
-      users: PropTypes.array
+      users: PropTypes.array,
+      stock: PropTypes.object,
     }
 
     /**
@@ -40,16 +43,20 @@ class Examples extends Component {
       console.log('Examples page props', this.props)
       const {
         getUsers,
+        getStock,
         startTimer,
         timer,
-        users
+        users,
+        stock,
       } = this.props
 
       return (
         <Fragment>
           <h2>Examples</h2>
           <Paper style={{margin: '10px', padding: '10px'}}>
+
             <Users users={users} getUsers={() => getUsers(4)} />
+            <Stock stock={stock} getStock={()=>getStock('AAPL')} />
           </Paper>
           <Paper style={{margin: '10px', padding: '10px'}}>
             <Timer timer={timer} startTimer={() => startTimer(5000)} />
@@ -68,6 +75,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   getUsers,
+  getStock,
   startTimer
 }
 

@@ -1,5 +1,5 @@
 const { requestServiceGet } = require('./requestPromises')
-
+const token = 'Tpk_0c6f6fa98feb4d27a7049bbd4915a0dc' // test publish token
 /**
  * @function
  * @param {string} data - number of users to request
@@ -13,6 +13,14 @@ function getUsers (data) {
   })
 }
 
+function getStock (data) {
+  return requestServiceGet({
+    uri: `${data}/quote?token=${token}`,
+    baseUrl: 'https://sandbox.iexapis.com/stable/stock/',
+    json: true
+  })
+}
+
 module.exports = {
-  getUsers
+  getUsers, getStock
 }

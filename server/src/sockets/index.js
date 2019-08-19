@@ -1,7 +1,8 @@
 const emitterTypes = require('./emitterTypes')
 const listenerTypes = require('./listenerTypes')
 const {
-  getUsers
+  getUsers,
+  getStock
 } = require('../apis')
 
 /**
@@ -22,6 +23,16 @@ function initListeners (socket) {
       socket.emit(emitterTypes.SERVER_USERS, data.users)
     } catch (error) {
       socket.emit(emitterTypes.SERVER_USERS_ERROR)
+    }
+  })
+
+  socket.on(listenerTypes.CLIENT_GET_STOCK, async (requestedStock) => {
+    try {
+      const data = await getStock(requestedStock)
+      console.log('data', data)
+      socket.emit(emitterTypes.SERVER_STOCK, data)
+    } catch (error) {
+      socket.emit(emitterTypes.SERVER_STOCK_ERROR)
     }
   })
 }

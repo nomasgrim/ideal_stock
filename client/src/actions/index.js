@@ -1,5 +1,6 @@
 import dismissSnackbar from './dismissSnackbar'
 import getUsers from './getUsers'
+import getStock from './getStock'
 import startTimer from './startTimer'
 
 /**
@@ -17,5 +18,6 @@ import startTimer from './startTimer'
 export {
   dismissSnackbar,
   getUsers,
+  getStock,
   startTimer
 }
